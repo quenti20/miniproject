@@ -11,7 +11,9 @@ app.use(cors({
 
 app.use(bodyparser.json());
 
-mongoose.connect("mongodb+srv://quenti20:oJG6IN7thlpZbaka@cluster0.6iqfd11.mongodb.net/")
+const MONGO_URL = "mongodb+srv://quenti20:oJG6IN7thlpZbaka@cluster0.6iqfd11.mongodb.net/"
+
+mongoose.connect(MONGO_URL)
 
 // mongoose.connect("mongodb+srv://dhiyanesh7338942092:FvpewDMHMvmqRMbT@blog.dae4tcu.mongodb.net/")
 
