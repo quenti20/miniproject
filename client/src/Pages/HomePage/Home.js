@@ -42,11 +42,6 @@ function Home() {
 		<div className="Home">
 			<div
 				className="container-fluid  mt-4 ml-0"
-				style={{
-					marginLeft: "90px",
-					paddingRight: "5px",
-					width: "calc(100% - 90px)",
-				}}
 			>
 				<div className="row" style={{marginTop: "-25px"}}>
 					{/* Title */}
@@ -97,7 +92,7 @@ function Home() {
                 index > 5 ? (
                   <div
                     onClick={() => navigate(`/blog/${row._id}`)}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer", margin: "auto" }}
                     className="list-item "
                   >
                     <div className="p-2">
@@ -159,8 +154,8 @@ function Home() {
 									<button onClick={(e) => searchBlog(e, 'React')} className="button">
 										React
 									</button>
-									<button onClick={(e) => searchBlog(e, 'CI/CD')} className="button">
-										CI/CD
+									<button onClick={(e) => searchBlog(e, 'pipeline')} className="button">
+										Pipeline
 									</button>
 									<button onClick={(e) => searchBlog(e, 'Analysis')} className="button">Analysis</button>
 									<button onClick={(e) => searchBlog(e, 'Python')} className="button">
@@ -172,8 +167,8 @@ function Home() {
 									<button onClick={(e) => searchBlog(e, 'JAVA')} className="button">JAVA</button>
 									<button onClick={(e) => searchBlog(e, 'Spring Boot')} className="button">Spring Boot</button>
 									<button onClick={(e) => searchBlog(e, 'Organizations')} className="button">Organizations</button>
-									<button onClick={(e) => searchBlog(e, 'Networking')} className="button">
-										Networking
+									<button onClick={(e) => searchBlog(e, 'Machine Learning')} className="button">
+										Machine Learning
 									</button>
 
 									<button  onClick={(e) => searchBlog(e, 'Development')} className="button">Development</button>
