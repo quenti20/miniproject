@@ -6,7 +6,7 @@ const dataRoutes = require("./routes/routes")
 const bodyparser = require('body-parser')
 
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: 'miniproject-ivory.vercel.app'
 }));
 
 app.use(bodyparser.json());

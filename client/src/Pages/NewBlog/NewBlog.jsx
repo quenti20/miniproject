@@ -17,7 +17,7 @@ const NewBlog = () => {
         if(editId){
             e.preventDefault();
             try {
-                const res = await axios.post(`http://localhost:5000/updateBlog/${editId}/${localStorage.getItem('id')}`, { title, author, content })
+                const res = await axios.post(`miniproject-ivory.vercel.app/updateBlog/${editId}/${localStorage.getItem('id')}`, { title, author, content })
                 if (res.status === 200) {
                     navigate(`/blog/${editId}`)
                 }
@@ -28,7 +28,7 @@ const NewBlog = () => {
         else{
             e.preventDefault();
             try {
-                const res = await axios.post(`http://localhost:5000/newBlog/${localStorage.getItem('id')}`, { title, author, content })
+                const res = await axios.post(`miniproject-ivory.vercel.app/newBlog/${localStorage.getItem('id')}`, { title, author, content })
                 if (res.status === 201) {
                     navigate(`/blog/${res.data._id}`)
                 }
@@ -41,7 +41,7 @@ const NewBlog = () => {
     useEffect(() => {
         const getBlogData = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/getBlogById/${editId}`)
+                const res = await axios.get(`miniproject-ivory.vercel.app/getBlogById/${editId}`)
                 if (res.status === 200) {
                     setTitle(res.data.title)
                     setContent(res.data.content)

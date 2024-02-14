@@ -19,7 +19,7 @@ function Signup()
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:5000/signUp", { email, name, password });
+            const res = await axios.post("miniproject-ivory.vercel.app/signUp", { email, name, password });
             if (res && res.status === 201 && res.data && res.data.user && res.data.user._id) {
                 localStorage.setItem('id', res.data.user._id);
                 localStorage.setItem('name', res.data.user.name);
@@ -41,7 +41,7 @@ function Signup()
     const loginValidate = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:5000/logIn", { email, password })
+            const res = await axios.post("miniproject-ivory.vercel.app/logIn", { email, password })
             if (res && res.status === 201 && res.data && res.data.user && res.data.user._id) {
                 localStorage.setItem('id', res.data.user._id)
                 localStorage.setItem('name', res.data.user.name)

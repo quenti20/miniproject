@@ -61,7 +61,7 @@ function Navbar() {
   const searchBlog = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.get(`http://localhost:5000/searchBlog/${search}`)
+      const res = await axios.get(`miniproject-ivory.vercel.app/searchBlog/${search}`)
       if (res.status === 200) {
         navigate(`/blog/${res.data.bestMatchId}`)
         setSearch('')

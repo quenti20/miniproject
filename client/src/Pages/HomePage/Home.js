@@ -13,7 +13,7 @@ function Home() {
 		const getAllBlogs = async () => {
 			try {
 				const res = await axios.get(
-					"http://localhost:5000/getAllBlogs"
+					"miniproject-ivory.vercel.app/getAllBlogs"
 				);
 				if (res.status === 201) {
 					setBlogData(res.data);
@@ -29,7 +29,7 @@ function Home() {
 	const searchBlog = async (e, search) => {
 		e.preventDefault()
 		try {
-		  const res = await axios.get(`http://localhost:5000/searchBlog/${search}`)
+		  const res = await axios.get(`miniproject-ivory.vercel.app/searchBlog/${search}`)
 		  if (res.status === 200) {
 			navigate(`/blog/${res.data.bestMatchId}`)
 		  }

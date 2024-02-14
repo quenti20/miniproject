@@ -17,7 +17,7 @@ const UserProfile = () => {
 		const getUserData = async () => {
 			try {
 				const res = await axios.get(
-					`http://localhost:5000/getUserData/${id}`
+					`miniproject-ivory.vercel.app/getUserData/${id}`
 				);
 				if (res.status === 200) {
 					setUserData(res.data.userData);
@@ -35,7 +35,7 @@ const UserProfile = () => {
 		e.preventDefault();
 		try {
 			const res = await axios.put(
-				`http://localhost:5000/editUserData/${id}`,
+				`miniproject-ivory.vercel.app/editUserData/${id}`,
 				userData
 			);
 			if (res.status === 200) {

@@ -14,7 +14,7 @@ function BlogPostPage() {
 		const getBlogData = async () => {
 			try {
 				const res = await axios.get(
-					`http://localhost:5000/getBlogById/${id}`
+					`miniproject-ivory.vercel.app/getBlogById/${id}`
 				);
 				if (res.status === 200) {
 					setBlogPost(res.data);
@@ -35,7 +35,7 @@ function BlogPostPage() {
 		const getBlogData = async () => {
 			try {
 				const res = await axios.get(
-					`http://localhost:5000/getBlogById/${id}`
+					`miniproject-ivory.vercel.app/getBlogById/${id}`
 				);
 				if (res.status === 200) {
 					setBlogPost(res.data);
@@ -56,7 +56,7 @@ function BlogPostPage() {
 	const deleteBlog = async () => {
 		try {
 			const res = await axios.delete(
-				`http://localhost:5000/deleteBlogById/${id}`
+				`miniproject-ivory.vercel.app/deleteBlogById/${id}`
 			);
 			if (res.status === 200) {
 				navigate(`/User/${localStorage.getItem("id")}`);
@@ -69,7 +69,7 @@ function BlogPostPage() {
 	const addLikes = async () => {
 		if (localStorage.getItem('id')) {
 			try {
-				const res = await axios.get(`http://localhost:5000/addLikes/${id}/${localStorage.getItem('id')}`)
+				const res = await axios.get(`miniproject-ivory.vercel.app/addLikes/${id}/${localStorage.getItem('id')}`)
 				if (res.status === 200) {
 					setBlogPost(res.data)
 				}
@@ -83,7 +83,7 @@ function BlogPostPage() {
 	}
 	const removeLikes = async () => {
 		try {
-			const res = await axios.get(`http://localhost:5000/removeLikes/${id}/${localStorage.getItem('id')}`)
+			const res = await axios.get(`miniproject-ivory.vercel.app/removeLikes/${id}/${localStorage.getItem('id')}`)
 			if (res.status === 200) {
 				setBlogPost(res.data)
 			}
